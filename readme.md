@@ -10,40 +10,38 @@
 - 自动创建 GitHub PR
 - 友链审核页面
 
-## 快速开始
+## 一键部署
 
-### 1. 克隆项目
+点击下方按钮即可部署到 Vercel：
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyiikooo%2Ffriend-link-api&env=MONGODB_URI,GITHUB_TOKEN,GITHUB_REPO,ADMIN_EMAIL,API_DOMAIN,PR_PASSWORD,SMTP_HOST,SMTP_PORT,SMTP_USER,SMTP_PASS)
+
+### 环境变量配置
+
+| 变量名       | 说明                                           | 示例                                           |
+| ------------ | ---------------------------------------------- | ---------------------------------------------- |
+| MONGODB_URI  | MongoDB 连接字符串                             | `mongodb+srv://user:pass@cluster.mongodb.net/` |
+| GITHUB_TOKEN | GitHub Personal Access Token（需要 repo 权限） | `ghp_xxxxxxxxxxxx`                             |
+| GITHUB_REPO  | GitHub 仓库（格式：owner/repo）                | `username/blog-repo`                           |
+| ADMIN_EMAIL  | 管理员邮箱（接收友链申请通知）                 | `admin@example.com`                            |
+| API_DOMAIN   | API 域名（用于生成审核链接）                   | `https://your-api.vercel.app`                  |
+| PR_PASSWORD  | 审核密码                                       | `your-secure-password`                         |
+| SMTP_HOST    | SMTP 服务器地址                                | `smtp.example.com`                             |
+| SMTP_PORT    | SMTP 端口                                      | `465`                                          |
+| SMTP_USER    | SMTP 用户名                                    | `user@example.com`                             |
+| SMTP_PASS    | SMTP 密码                                      | `your-smtp-password`                           |
+
+## 本地开发
 
 ```bash
-git clone https://github.com/your-username/friend-link-api.git
+# 克隆项目
+git clone https://github.com/yiikooo/friend-link-api.git
 cd friend-link-api
-```
 
-### 2. 安装依赖
-
-```bash
+# 安装依赖
 npm install
-```
 
-### 3. 配置环境变量
-
-| 变量名       | 说明                         |
-| ------------ | ---------------------------- |
-| MONGODB_URI  | MongoDB 连接字符串           |
-| GITHUB_TOKEN | GitHub Personal Access Token |
-| GITHUB_OWNER | GitHub 用户名                |
-| GITHUB_REPO  | 博客仓库名                   |
-| ADMIN_EMAIL  | 管理员邮箱                   |
-| API_DOMAIN   | API 域名                     |
-| PR_PASSWORD  | 审核密码                     |
-| SMTP_HOST    | SMTP 服务器地址              |
-| SMTP_PORT    | SMTP 端口                    |
-| SMTP_USER    | SMTP 用户名                  |
-| SMTP_PASS    | SMTP 密码                    |
-
-### 4. 本地运行
-
-```bash
+# 配置 .env 文件后运行
 npm run dev
 ```
 
