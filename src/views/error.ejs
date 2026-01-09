@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background-color: #f6f8fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+            padding: 32px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .error-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            color: #d73a49;
+        }
+
+        .error-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0 0 16px;
+            color: #24292e;
+        }
+
+        .error-message {
+            color: #586069;
+            margin-bottom: 24px;
+        }
+
+        .back-link {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="error-icon">⚠️</div>
+        <h1 class="error-title">Error</h1>
+        <p class="error-message">
+            <%= message %>
+        </p>
+        <a href="javascript:history.back()" class="back-link">Go Back</a>
+    </div>
+</body>
+
+</html>
