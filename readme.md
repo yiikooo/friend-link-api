@@ -27,26 +27,6 @@ npm install
 
 ### 3. 配置环境变量
 
-复制 `.env.example` 为 `.env` 并填写配置：
-
-```bash
-cp .env.example .env
-```
-
-### 4. 本地运行
-
-```bash
-npm run dev
-```
-
-### 5. 部署到 Vercel
-
-```bash
-vercel
-```
-
-## 环境变量说明
-
 | 变量名       | 说明                         |
 | ------------ | ---------------------------- |
 | MONGODB_URI  | MongoDB 连接字符串           |
@@ -60,6 +40,12 @@ vercel
 | SMTP_PORT    | SMTP 端口                    |
 | SMTP_USER    | SMTP 用户名                  |
 | SMTP_PASS    | SMTP 密码                    |
+
+### 4. 本地运行
+
+```bash
+npm run dev
+```
 
 ## API 接口
 
